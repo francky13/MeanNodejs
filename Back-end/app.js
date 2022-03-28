@@ -26,12 +26,12 @@ mongoose.connect('mongodb+srv://user:user12345678@mangodb.unp9t.mongodb.net/myFi
 
 app.use('/api/Utilisateur', UtilisateurRoute);
 
-app.use(express.static(path.join(__dirname, 'Angular/dist/project-angular')))
+app.use(express.static(path.join(__dirname, '../dist/project-angular')))
 
 app.get('*', (req, res) => {
   res.sendFile(
-    path.join(__dirname, 'Angular/dist/project-angular/index.html'),
-    console.log(path.join(__dirname, 'Angular/dist/project-angular/index.html'))
+    path.join(__dirname, '../dist/project-angular/index.html'),
+    console.log(path.join(__dirname, 'dist/project-angular/index.html'))
   )
 })
 
