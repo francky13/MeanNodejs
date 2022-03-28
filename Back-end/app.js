@@ -26,10 +26,10 @@ mongoose.connect('mongodb+srv://user:user12345678@mangodb.unp9t.mongodb.net/myFi
 
 app.use('/api/Utilisateur', UtilisateurRoute);
 
-app.use(express.static('./dist/project-angular'));
+app.use(express.static('dist/project-angular'));
 
 app.get('/*', (req, res) =>
-    res.sendFile('index.html', {root: 'dist/project-angular/'}),
+    res.sendFile('index.html', {root: 'dist/project-angular'}),
 
 );
 
