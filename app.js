@@ -4,7 +4,7 @@ const mangose = require('mongoose');
 let cors = require('cors');
 const { default: mongoose } = require('mongoose');
 var UtilisateurRoute = require('./routes/UtilisateurRoute');
-
+const path = require('path')
 
 //Gestion Cors
 app.use(cors({ origin: "http://localhost:3000/" }));
@@ -26,4 +26,11 @@ mongoose.connect('mongodb+srv://user:user12345678@mangodb.unp9t.mongodb.net/myFi
 
 app.use('/api/Utilisateur', UtilisateurRoute);
 
+app.use(express.static(path.join(__dirname, 'Angular/dist/project-angular')))
+
+app.get('*', (req, res) => {
+  res.sendFile(
+    path.join(__dirname, 'Angular/dist/project-angular/index.html'),
+  )
+})
 module.exports = app;
