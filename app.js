@@ -31,6 +31,8 @@ app.use(express.static(path.join(__dirname, 'Angular/dist/project-angular')))
 app.get('*', (req, res) => {
   res.sendFile(
     path.join(__dirname, 'Angular/dist/project-angular/index.html'),
+    console.log(path.join(__dirname, 'Angular/dist/project-angular/index.html'))
   )
 })
+
 module.exports = app;

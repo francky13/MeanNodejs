@@ -8,6 +8,7 @@
 
 // app.get('/*', (req, res) =>
 //     res.sendFile('index.html', {root: 'dist/project-angular/'}),
+
 // );
 
 // // Start the app by listening on the default Heroku port
